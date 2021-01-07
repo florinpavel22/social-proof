@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark-magenta: #502050;
+    --baton-background: #e6e0e6;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Spartan', sans-serif;
+}
+
+body {
+    font-size: 1.4rem;
+}
+
+/* Container */
+.container {
+    width: 85%;
+    padding-top: 6rem;
+    margin: 0 auto;
+}
+
+/* Top Section */
+.top-section {
+    color: var(--dark-magenta);
+}
+
+.top-section-left {
+    text-align: center;
+}
+
+.top-section-left h2 {
+    font-size: 4rem;
+    margin-bottom: 3rem;
+}
+
+.top-section-left p, .review {
+    line-height: 1.5;
+}
+
+.top-section-right {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    grid-gap: 2rem 4rem;
+    margin: 3.8rem 0;
+}
+
+/* Review Batons */
+.baton {
+    background-color: var(--baton-background);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+.stars {
+    margin-bottom: 0.5rem;
+}
+
+.baton p {
+    font-weight: 600;
+}
+
+/* Bottom Section */
+.bottom-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-gap: 2rem 4rem;
+}
+
+/* Cards */
+.card {
+    background-color: var(--dark-magenta);
+    border-radius: 0.5rem;
+    padding: 2.5rem;
+    color: var(--baton-background);
+}
+
+.customer-description {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.customer-description img {
+    width: 6rem;
+    border-radius: 50%;
+}
+
+.customer-description div {
+    margin-left: 2rem;
+}
+
+.customer-description h5 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.customer-status {
+    color: pink;
+}
+
+/* Media Queries */
+@media(min-width: 1100px) {
+    .container {
+        max-width: 1100px;
+    }
+
+    .top-section {
+        display: grid;
+        grid-template-columns: 45% 1fr;
+        grid-column-gap: 3rem;
+        margin-bottom: 5rem;
+    }
+
+    .top-section-left {
+        text-align: left;
+    }
+
+    .top-section-left h2 {
+        font-size: 4.5rem;
+    }
+
+    .top-section-right {
+        margin: 0;
+        grid-template-columns: 1fr;
+        justify-items: end;
+    }
+
+    .baton {
+        display: flex;
+        align-items: center;
+        max-width: 42rem;
+    }
+
+    .baton:first-child {
+        transform: translateX(-12rem);
+    }
+
+    .baton:nth-child(2) {
+        transform: translateX(-4rem);
+    }
+
+    .baton p {
+        margin-left: 1rem;
+    }
+
+    .card:nth-child(2) {
+        transform: translateY(0.5rem);
+    }
+}
